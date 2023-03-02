@@ -29,7 +29,7 @@ body{
     animation: fadeIn 1.5s;
 }
 
-.container{
+#container{
     height: 100vh;
 }
 .navBar{
