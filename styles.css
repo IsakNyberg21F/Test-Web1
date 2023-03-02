@@ -1,0 +1,83 @@
+@keyframes fadeIn{
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@media only screen and (max-width: 800px){
+    
+}
+
+
+html, body{
+    font-family: sans-serif;
+}
+html{
+    height: 100%;
+}
+body{
+    margin: 0px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding: 0px;
+    background-color: whitesmoke;
+    animation: fadeIn 1.5s;
+}
+
+.container{
+    height: 100vh;
+}
+.navBar{
+    top: 0;
+    position: fixed;
+    height: 10vh;
+    width: 100vw;
+    background-color: whitesmoke;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.navBarLeft, .navBarMiddle, .navBarRight{
+    height: 100%;
+    width: 25vw;
+}
+.navBarLeft{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+nav ul {
+    list-style: none; /* Remove bullet points */
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    display: inline-block; /* Display list items horizontally */
+}
+
+nav a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: #000;
+    font-weight: 600;
+    transition: width 0.3s ease-out; /* Animate the width of the underline */
+}
+nav a::after {
+    content: "";
+    display: block;
+    left: 0;
+    bottom: -5px; /* Position the underline 5px below the text */
+    width: 0;
+    height: 2px;
+    background-color: #000;
+    transition: width 0.2s ease-out; /* Animate the width of the underline */
+}
+nav a:hover::after {
+    width: 100%; /* Animate the width of the underline to 100% on hover */
+}
