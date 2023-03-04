@@ -1,4 +1,4 @@
-const sideBar = document.querySelector('.content');
+/*const sideBar = document.querySelector('.content');
 const overlay = document.querySelector('.overlay');
 
 window.addEventListener('click', function(event) {
@@ -7,7 +7,7 @@ window.addEventListener('click', function(event) {
         document.getElementById("popup-1").classList.remove("active");
         console.log("hejejejejeje");
     }
-});
+});*/
 
 function toggleMenuSidebar(){
     document.getElementById("popup-1").classList.toggle("active");

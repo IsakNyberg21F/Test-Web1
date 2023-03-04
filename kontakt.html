@@ -9,7 +9,18 @@
     <title>Hemsida</title>
 </head>
 <body>
-    <div class="container">
+    <div id="containerKontakt">
+        <div class="popup" id="popup-1">
+            <div class="overlay"></div>
+            <div class="content">
+              <div class="contentTop">
+                <div class="close-btn" onclick="toggleMenuSidebar()">&times;</div>
+              </div>
+              <div class="contentBottom">
+                <a class="navMenuButtons" href="index.html">Hem</a>
+              </div>
+            </div>
+          </div>
         <div class="navBar">
             <div class="navBarLeft">
                 <nav>
@@ -25,9 +36,43 @@
                 
             </div>
             <div class="navBarRight">
-                
+                <a id="menuButton" onclick="toggleMenuSidebar()">
+                    <img src="Images/134216_menu_lines_hamburger_icon(3).png" alt="menuImage" height="30px" width="30px">
+                </a>
             </div>
         </div>
+        <form action="https://formsubmit.co/isak.nyberg7@gmail.com" method="POST">
+            <label for="name">Namn:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="email">E-post:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="subject">Ämne:</label>
+            <input type="text" id="subject" name="subject" required>
+            
+            <label for="message">Meddelande:</label>
+            <textarea id="message" name="message" required></textarea>
+            
+            <input type="submit" value="Skicka">
+          </form>
     </div>
+    <script src="code.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script>
+        function sendMail(){
+            Email.send({
+                Host : "smtp.gmail.com",
+                Username : "isak.a.nyberg@gmail.com",
+                Password : "",
+                To : 'isak.nyberg7@gmail.com',
+                From : document.getElementById('email').value,
+                Subject : "New Contact Form Enquiry",
+                Body : "And this is the body"
+            }).then(
+            message => alert(message)
+            );
+        }
+    </script>
 </body>
 </html>

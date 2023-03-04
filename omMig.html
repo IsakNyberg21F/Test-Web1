@@ -9,7 +9,18 @@
     <title>Hemsida</title>
 </head>
 <body>
-    <div class="container">
+    <div id="containerOmMig">
+        <div class="popup" id="popup-1">
+            <div class="overlay"></div>
+            <div class="content">
+              <div class="contentTop">
+                <div class="close-btn" onclick="toggleMenuSidebar()">&times;</div>
+              </div>
+              <div class="contentBottom">
+                <a class="navMenuButtons" href="index.html">Hem</a>
+              </div>
+            </div>
+          </div>
         <div class="navBar">
             <div class="navBarLeft">
                 <nav>
@@ -25,9 +36,12 @@
                 
             </div>
             <div class="navBarRight">
-                
+                <a id="menuButton" onclick="toggleMenuSidebar()">
+                    <img src="Images/134216_menu_lines_hamburger_icon(3).png" alt="menuImage" height="30px" width="30px">
+                </a>
             </div>
         </div>
     </div>
+    <script src="code.js"></script>
 </body>
 </html>

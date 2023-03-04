@@ -31,11 +31,23 @@ body{
 
 #container{
     height: 100vh;
+    width: 100%;
+    background-image: url("Images/pexels-tirachard-kumtanom-733853.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#containerKontakt, #containerOmMig, #containerTjänster{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .navBar{
     top: 0;
     position: fixed;
-    height: 10vh;
+    height: 8vh;
     width: 100vw;
     background-color: whitesmoke;
 
@@ -70,7 +82,7 @@ nav a {
     text-decoration: none;
     color: #000;
     font-weight: 600;
-    transition: width 0.3s ease-out; /* Animate the width of the underline */
+    transition: width 0.2s ease-out; /* Animate the width of the underline */
 }
 nav a::after {
     content: "";
@@ -157,6 +169,47 @@ nav a:hover::after {
     height: 100vh;
     width: 100%;
 }
-.navMenuButtons{
 
-}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    margin: 0 auto;
+    font-family: Arial, sans-serif;
+  }
+  
+  label {
+    margin-top: 10px;
+  }
+  
+  input[type="text"],
+  input[type="email"],
+  textarea {
+    padding: 5px;
+    margin-top: 5px;
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  
+  input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
+  input[type="submit"]:hover {
+    background-color: #3e8e41;
+  }
+  
+  input:focus,
+  textarea:focus {
+    outline: none;
+    border: 1px solid #4CAF50;
+  }
