@@ -55,24 +55,8 @@
             <textarea id="message" name="message" required></textarea>
             
             <input type="submit" value="Skicka">
-          </form>
+        </form>
     </div>
     <script src="code.js"></script>
-    <script src="https://smtpjs.com/v3/smtp.js"></script>
-    <script>
-        function sendMail(){
-            Email.send({
-                Host : "smtp.gmail.com",
-                Username : "isak.a.nyberg@gmail.com",
-                Password : "",
-                To : 'isak.nyberg7@gmail.com',
-                From : document.getElementById('email').value,
-                Subject : "New Contact Form Enquiry",
-                Body : "And this is the body"
-            }).then(
-            message => alert(message)
-            );
-        }
-    </script>
 </body>
 </html>
