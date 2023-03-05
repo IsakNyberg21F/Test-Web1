@@ -10,11 +10,10 @@
 /* Apply styles for screens smaller than 768px */
 @media screen and (max-width: 768px) {
     nav a{
-        font-size: 8px;
+        font-size: 10px;
     }
 
 }
-
 
 html, body{
     font-family: sans-serif;
@@ -53,16 +52,7 @@ body{
 
     display: flex;
     align-items: center;
-    justify-content: space-between;
-}
-.navBarLeft, .navBarMiddle, .navBarRight{
-    height: 100%;
-    width: 25vw;
-}
-.navBarLeft{
-    display: flex;
-    align-items: center;
-    margin-left: 20px;
+    justify-content: center;
 }
 nav ul {
     list-style: none; /* Remove bullet points */
@@ -78,7 +68,7 @@ nav li {
 nav a {
     white-space: nowrap;
     display: block;
-    padding: 10px;
+    padding: 20px;
     text-decoration: none;
     color: #000;
     font-weight: 600;
@@ -96,78 +86,6 @@ nav a::after {
 }
 nav a:hover::after {
     width: 100%; /* Animate the width of the underline to 100% on hover */
-}
-.navBarRight{
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    margin-right: 20px;
-}
-#menuButton:hover{
-    cursor: pointer;
-}
-
-
-
-.popup .overlay{
-    position: fixed;
-    top: 0px;
-    left: 0px;
-    width: 100vw;
-    height: 100vh;
-    background: rgba(0, 0, 0, 0.7);
-    z-index: 1;
-    scale: 0;
-}
-.popup .content{
-    top: 0px;
-    left: 110%;
-    position: fixed;
-    background: #fff;
-    width: 20vw;
-    height: 100vh;
-    z-index: 2;
-    text-align: center;
-    padding: 20px;
-    box-sizing: border-box;
-    transition: left 0.4s ease-in-out;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-}
-.popup .close-btn{
-    cursor: pointer;
-    width: 25px;
-    height: 25px;
-    color: black;
-    font-size: 25px;
-    font-weight: 600;
-    line-height: 30px;
-    text-align: center;
-}
-.popup.active .overlay{
-    display: block;
-    scale: 1;
-}
-
-.popup.active .content{
-    left: 80vw;
-}
-
-.contentTop{
-    display: flex;
-    justify-content: flex-end;
-    height: 5%;
-    width: 100%;
-}
-.contentBottom{
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    height: 100vh;
-    width: 100%;
 }
 
 
