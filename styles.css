@@ -12,12 +12,15 @@
     nav a{
         font-size: 10px;
     }
-    #omMigParent{
+    #containerOmMig{
         flex-direction: column;
-        margin-top: 200px;
+        margin-top: 80px;
     }
     #omMigRight{
         margin-top: 20px;
+    }
+    #omMigLeft{
+        margin-top: 140px;
     }
     #omMigLeft, #omMigRight{
         width: 80% !important;
@@ -26,7 +29,7 @@
 
 
 html, body{
-    font-family: sans-serif;
+    font-family: Georgia, 'Times New Roman', Times, serif;
     height: 100%;
 }
 body{
@@ -36,6 +39,7 @@ body{
     padding: 0px;
     background-color: whitesmoke;
     animation: fadeIn 1.5s;
+    overflow-x: hidden;
 }
 
 #container{
@@ -48,25 +52,40 @@ body{
     background-image: url("Images/IMG_8426.jpg");
     background-size: 100% auto;
     background-repeat: no-repeat;
-    margin-top: 8vh;
 }
 #containerKontakt, #containerOmMig, #containerUtbildning{
     height: 100vh;
-    width: 100%;
+    width: 100vw;
     display: flex;
     justify-content: center;
     align-items: center;
 }
+#containerOmMig{
+    justify-content: space-evenly;
+}
 #navBar{
     top: 0;
-    position: fixed;
-    height: 8vh;
+    position: sticky;
+    height: 100px;
     width: 100vw;
     background-color: white;
+    border-bottom: 2px solid;
 
     display: flex;
+    flex-direction: column;
     align-items: center;
+    justify-content: space-evenly;
+}
+.navBarBottom, .navBarTop{
+    display: flex;
     justify-content: center;
+    align-items: center;
+    height: 35px;
+    width: 100%;
+}
+.websiteName{
+    font-size: 20px;
+    font-weight: 700;
 }
 nav ul {
     list-style: none; /* Remove bullet points */
@@ -82,11 +101,11 @@ nav li {
 }
 
 nav a {
+    font-size: 16px;
     white-space: nowrap;
     display: block;
     text-decoration: none;
     color: #000;
-    font-weight: 600;
     transition: width 0.2s ease-out; /* Animate the width of the underline */
 }
 nav a::after {
@@ -95,7 +114,7 @@ nav a::after {
     left: 0;
     bottom: -5px; /* Position the underline 5px below the text */
     width: 0;
-    height: 2px;
+    height: 1.5px;
     background-color: #000;
     transition: width 0.2s ease-out; /* Animate the width of the underline */
 }
@@ -145,20 +164,14 @@ form {
     outline: none;
     border: 1px solid black;
   }
-
-#omMigParent{
-    height: 100vh;
-    width: 100vw;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-}
-#omMigLeft, #omMigRight{
+#omMigLeft, #omMigRight, #omMigMiddle{
     width: 40%;
     height: auto;
+    padding: 20px;
 }
 .headers{
     font-size: large;
+    text-align: center;
 }
 .texts{
     font-size: medium;
